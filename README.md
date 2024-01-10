@@ -1,4 +1,4 @@
-# genshinguesswho
+# Genshin Guess Who
 
 Plans
 - A portrait at the top that will bring up the portrait of the character you want the other person to guess
