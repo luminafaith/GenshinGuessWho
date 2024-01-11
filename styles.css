@@ -3,5 +3,10 @@
 }
 
 .characterSelect {
+    text-align: center;
     vertical-align: middle;
+}
+
+.characterSelectIcon {
+    text-align: center;
 }
