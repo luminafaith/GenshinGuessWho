@@ -12,3 +12,26 @@
 .characterSelectIcon {
     text-align: center;
 }
+
+.button {
+    border-top: 1px solid #b1c7e6;
+    background: #81A6DB;
+    background: -webkit-gradient(linear, left top, left bottom, from(#568CD0), to(#81A6DB));
+    background: -webkit-linear-gradient(top, #568CD0, #81A6DB);
+    background: -moz-linear-gradient(top, #568CD0, #81A6DB);
+    background: -ms-linear-gradient(top, #568CD0, #81A6DB);
+    background: -o-linear-gradient(top, #568CD0, #81A6DB);
+    padding: 13.5px 27px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+    box-shadow: rgba(0,0,0,1) 0 1px 0;
+    text-shadow: rgba(0,0,0,.4) 0 1px 0;
+    color: white;
+    font-size: 14px;
+    font-family: Helvetica, Arial, Sans-Serif;
+    text-decoration: none;
+    vertical-align: middle;
+    }
