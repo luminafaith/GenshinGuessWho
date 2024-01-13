@@ -9,127 +9,129 @@
         <div class="header">
             <!-- <header> -->
                 <h1>Genshin Guess Who?</h1>
-                <h3>A parody of the board game "Guess Who?" using characters from Genshin Impact.</h3>
+                <h3>A parody of the board game "Guess Who?" using characters from Genshin Impact</h3>
             <!-- </header> -->
         </div>
         <div class="gameSection">
-            <div class="characterSelectIcon">
+            <!-- <div class="characterSelectIcon">
                 <img src="images/Unknown_Icon.jpg" alt="Unknown Icon" style="width: 125px;height: 125px;">
-            </div>
+            </div> -->
             <div class="characterSelect">
                 <!-- center this -->
                 <!-- portrait that's based on the select value -->
                 <!-- <img src="images/Unknown_Icon.jpg" alt="Unknown Icon"> -->
                 <!-- drop-down list https://www.w3schools.com/tags/tag_select.asp -->
+                Mystery Person:
                 <select name="characters" id="characterSelectMenu">
-                    <option value="unknown">Select</option>
+                    <option value="Unknown">Select</option>
+                    <!-- Other -->
+                    <optgroup label="Other">
+                        <option value="Aether">Aether</option>
+                        <option value="Lumine">Lumine</option>
+                        <option value="Paimon">Paimon</option>
+                        <option value="Dainsleif">Dainsleif</option>
+                        <option value="Aloy">Aloy</option>
+                    </optgroup>
                     <!-- Mondstadt -->
                     <optgroup label="Mondstadt">
-                        <option value="albedo">Albedo</option>
-                        <option value="amber">Amber</option>
-                        <option value="barbara">Barbara</option>
-                        <option value="bennett">Bennett</option>
-                        <option value="diluc">Diluc</option>
-                        <option value="diona">Diona</option>
-                        <option value="eula">Eula</option>
-                        <option value="fischl">Fischl</option>
-                        <option value="jean">Jean</option>
-                        <option value="kaeya">Kaeya</option>
-                        <option value="klee">Klee</option>
-                        <option value="lisa">Lisa</option>
-                        <option value="mika">Mika</option>
-                        <option value="mona">Mona</option>
-                        <option value="noelle">Noelle</option>
-                        <option value="razor">Razor</option>
-                        <option value="rosaria">Rosaria</option>
-                        <option value="sucrose">Sucrose</option>
-                        <option value="venti">Venti</option>
+                        <option value="Albedo">Albedo</option>
+                        <option value="Amber">Amber</option>
+                        <option value="Barbara">Barbara</option>
+                        <option value="Bennett">Bennett</option>
+                        <option value="Diluc">Diluc</option>
+                        <option value="Diona">Diona</option>
+                        <option value="Eula">Eula</option>
+                        <option value="Fischl">Fischl</option>
+                        <option value="Jean">Jean</option>
+                        <option value="Kaeya">Kaeya</option>
+                        <option value="Klee">Klee</option>
+                        <option value="Lisa">Lisa</option>
+                        <option value="Mika">Mika</option>
+                        <option value="Mona">Mona</option>
+                        <option value="Noelle">Noelle</option>
+                        <option value="Razor">Razor</option>
+                        <option value="Rosaria">Rosaria</option>
+                        <option value="Sucrose">Sucrose</option>
+                        <option value="Venti">Venti</option>
                     </optgroup>
                     <!-- Liyue -->
                     <optgroup label="Liyue">
-                        <option value="baizhu">Baizhu</option>
-                        <option value="beidou">Beidou</option>
-                        <option value="chongyun">Chongyun</option>
-                        <option value="gaming">Gaming</option>
-                        <option value="ganyu">Ganyu</option>
-                        <option value="hutao">Hu Tao</option>
-                        <option value="keqing">Keqing</option>
-                        <option value="ningguang">Ningguang</option>
-                        <option value="qiqi">Qiqi</option>
-                        <option value="shenhe">Shenhe</option>
-                        <option value="xiangling">Xiangling</option>
-                        <option value="xianyun">Xianyun</option>
-                        <option value="xiao">Xiao</option>
-                        <option value="xingqiu">Xingqiu</option>
-                        <option value="xinyan">Xinyan</option>
-                        <option value="yanfei">Yanfei</option>
-                        <option value="yaoyao">Yaoyao</option>
-                        <option value="yelan">Yelan</option>
-                        <option value="yunjin">Yun Jin</option>
-                        <option value="zhongli">Zhongli</option>
+                        <option value="Baizhu">Baizhu</option>
+                        <option value="Beidou">Beidou</option>
+                        <option value="Chongyun">Chongyun</option>
+                        <option value="Gaming">Gaming</option>
+                        <option value="Ganyu">Ganyu</option>
+                        <option value="HuTao">Hu Tao</option>
+                        <option value="Keqing">Keqing</option>
+                        <option value="Ningguang">Ningguang</option>
+                        <option value="Qiqi">Qiqi</option>
+                        <option value="Shenhe">Shenhe</option>
+                        <option value="Xiangling">Xiangling</option>
+                        <option value="Xianyun">Xianyun</option>
+                        <option value="Xiao">Xiao</option>
+                        <option value="Xingqiu">Xingqiu</option>
+                        <option value="Xinyan">Xinyan</option>
+                        <option value="Yanfei">Yanfei</option>
+                        <option value="Yaoyao">Yaoyao</option>
+                        <option value="Yelan">Yelan</option>
+                        <option value="YunJin">Yun Jin</option>
+                        <option value="Zhongli">Zhongli</option>
                     </optgroup>
                     <!-- Inazuma -->
                     <optgroup label="Inazuma">
-                        <option value="ayaka">Ayaka</option>
-                        <option value="ayato">Ayato</option>
-                        <option value="gorou">Gorou</option>
-                        <option value="heizou">Heizou</option>
-                        <option value="itto">Itto</option>
-                        <option value="kazuha">Kazuha</option>
-                        <option value="kirara">Kirara</option>
-                        <option value="kokomi">Kokomi</option>
-                        <option value="sara">Sara</option>
-                        <option value="raiden">Raiden Shogun</option>
-                        <option value="sayu">Sayu</option>
-                        <option value="shinobu">Shinobu</option>
-                        <option value="thoma">Thoma</option>
-                        <option value="yaemiko">Yae Miko</option>
-                        <option value="yoimiya">Yoimiya</option>
+                        <option value="Ayaka">Ayaka</option>
+                        <option value="Ayato">Ayato</option>
+                        <option value="Gorou">Gorou</option>
+                        <option value="Heizou">Heizou</option>
+                        <option value="Itto">Itto</option>
+                        <option value="Kazuha">Kazuha</option>
+                        <option value="Kirara">Kirara</option>
+                        <option value="Kokomi">Kokomi</option>
+                        <option value="Sara">Sara</option>
+                        <option value="Raiden">Raiden Shogun</option>
+                        <option value="Sayu">Sayu</option>
+                        <option value="Shinobu">Shinobu</option>
+                        <option value="Thoma">Thoma</option>
+                        <option value="YaeMiko">Yae Miko</option>
+                        <option value="Yoimiya">Yoimiya</option>
                     </optgroup>
                     <!-- Sumeru -->
                     <optgroup label="Sumeru">
-                        <option value="alhaitham">Alhaitham</option>
-                        <option value="candace">Candace</option>
-                        <option value="collei">Collei</option>
-                        <option value="cyno">Cyno</option>
-                        <option value="dehya">Dehya</option>
-                        <option value="dori">Dori</option>
-                        <option value="faruzan">Faruzan</option>
-                        <option value="kaveh">Kaveh</option>
-                        <option value="layla">Layla</option>
-                        <option value="nahida">Nahida</option>
-                        <option value="nilou">Nilou</option>
-                        <option value="tighnari">Tighnari</option>
-                        <option value="wanderer">Wanderer</option>
+                        <option value="Alhaitham">Alhaitham</option>
+                        <option value="Candace">Candace</option>
+                        <option value="Collei">Collei</option>
+                        <option value="Cyno">Cyno</option>
+                        <option value="Dehya">Dehya</option>
+                        <option value="Dori">Dori</option>
+                        <option value="Faruzan">Faruzan</option>
+                        <option value="Kaveh">Kaveh</option>
+                        <option value="Layla">Layla</option>
+                        <option value="Nahida">Nahida</option>
+                        <option value="Nilou">Nilou</option>
+                        <option value="Tighnari">Tighnari</option>
+                        <option value="Wanderer">Wanderer</option>
                     </optgroup>
                     <!-- Fontaine -->
                     <optgroup label="Fontaine">
-                        <option value="charlotte">Charlotte</option>
-                        <option value="chevreuse">Chevreuse</option>
-                        <option value="freminet">Freminet</option>
-                        <option value="furina">Furina</option>
-                        <option value="lynette">Lynette</option>
-                        <option value="lyney">Lyney</option>
-                        <option value="navia">Navia</option>
-                        <option value="neuvillette">Neuvillette</option>
-                        <option value="wriothesley">Wriothesley</option>
+                        <option value="Charlotte">Charlotte</option>
+                        <option value="Chevreuse">Chevreuse</option>
+                        <option value="Freminet">Freminet</option>
+                        <option value="Furina">Furina</option>
+                        <option value="Lynette">Lynette</option>
+                        <option value="Lyney">Lyney</option>
+                        <option value="Navia">Navia</option>
+                        <option value="Neuvillette">Neuvillette</option>
+                        <option value="Wriothesley">Wriothesley</option>
                     </optgroup>
                     <!-- Snezhnaya -->
                     <optgroup label="Snezhnaya">
-                        <option value="tartaglia">Tartaglia</option>
-                    </optgroup>
-                    <!-- Other -->
-                    <optgroup label="Other">
-                        <option value="aether">Aether</option>
-                        <option value="lumine">Lumine</option>
-                        <option value="paimon">Paimon</option>
-                        <option value="dainsleif">Dainsleif</option>
-                        <option value="aloy">Aloy</option>
+                        <option value="Tartaglia">Tartaglia</option>
                     </optgroup>
                 </select>
             </div>
             <div class="characterGuess"></div>
         </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src="ggw.js"></script>
     </body>
 </html>
