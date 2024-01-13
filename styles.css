@@ -5,6 +5,8 @@
 .characterSelect {
     text-align: center;
     vertical-align: middle;
+    min-height: 175px;
+    /* background:aqua; */
 }
 
 .characterSelectIcon {
