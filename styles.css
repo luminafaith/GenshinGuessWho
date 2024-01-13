@@ -13,6 +13,10 @@
     text-align: center;
 }
 
+.characterGuess {
+    text-align: center;
+}
+
 .button {
     border-top: 1px solid #b1c7e6;
     background: #81A6DB;
@@ -35,3 +39,8 @@
     text-decoration: none;
     vertical-align: middle;
     }
+
+.characterGuessIcons {
+    width: 90vw; /* https://stackoverflow.com/questions/18666106/a-div-with-auto-resize-when-changing-window-width-height */
+    margin:auto; /* https://stackoverflow.com/questions/7926540/css-center-content-inside-div */
+}
