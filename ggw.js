@@ -23,3 +23,22 @@ $("select").on("change", function() {
 });
 
 {/* <img src="images/Unknown_Icon.jpg" alt="Unknown Icon" style="width: 125px;height: 125px;"></img> */}
+
+// https://softwareengineering.stackexchange.com/questions/340355/should-i-reduce-event-listeners-by-making-functions-more-complex
+// create some kind of container or dictionary (character: boolean) that we can check to see whether or not the icon needs to be changed to spiral abyss https://pietschsoft.com/post/2015/09/05/javascript-basics-how-to-create-a-dictionary-with-keyvalue-pairs
+// would have to change ID slightly so that we can better check against; try data-name https://www.w3schools.com/tags/att_global_data.asp
+let spiralCheck = true;
+function switchImage(character) {
+    let characterName = character.getAttribute("data-name");
+
+    if (spiralCheck) {
+        character.src = "images/SpiralAbyss_Cropped.jpg";
+        spiralCheck = false;
+    }
+    else {
+        character.src = "images/" + character.getAttribute("data-name") + "_Icon.jpg";
+        spiralCheck = true;
+    }
+}
+
+// if i need to crop the images https://cloudinary.com/guides/automatic-image-cropping/5-ways-to-crop-images-in-html-css
