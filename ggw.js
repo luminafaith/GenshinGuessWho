@@ -114,17 +114,48 @@ var dict = {
 };
 
 let spiralCheck = true;
+let characterName = "";
 function switchImage(character) {
-    let characterName = character.getAttribute("data-name");
+    characterName = character.getAttribute("data-name");
+    // loopTest(character);
 
-    if (dict["Aether"]) {
+    if (dict[characterName]) {
         character.src = "images/SpiralAbyss_Cropped.jpg";
-        dict["Aether"] = false;
+        dict[characterName] = false;
     }
     else {
-        character.src = "images/" + character.getAttribute("data-name") + "_Icon.jpg";
-        dict["Aether"] = true;
+        character.src = "images/" + characterName + "_Icon.jpg";
+        dict[characterName] = true;
     }
+}
+
+// making listeners
+let iconColl = document.getElementsByClassName("guessIcon");
+
+for (let i = 0; i < iconColl.length; i++) {
+    // looping through each guess icon element (the img)
+
+    // one guess icon, the current one. it is an element
+    // the event listener listens for a click on the element and executes switchImage with the element as the parameter
+    // iconColl[i].addEventListener("click", switchImage(iconColl[i]));
+    // solution from: https://stackoverflow.com/questions/16310423/addeventlistener-calls-the-function-without-me-even-asking-it-to
+    iconColl[i].addEventListener("click", () => {switchImage(iconColl[i])});
+    // loopTest(iconColl[i]);
+
+    // get the name
+    // characterName = iconColl[i].getAttribute("data-name");
+
+    // if (dict[characterName]) {
+    //     iconColl[i].src= "images/SpiralAbyss_Cropped.jpg";
+    //     dict[characterName] = false;
+    // }
+    // else {
+    //     characterName
+    // }
+}
+
+function loopTest(iconElement) {
+    document.getElementById("testP").innerHTML += iconElement.getAttribute("data-name");
 }
 
 // if i need to crop the images https://cloudinary.com/guides/automatic-image-cropping/5-ways-to-crop-images-in-html-css
