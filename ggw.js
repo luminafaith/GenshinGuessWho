@@ -1,24 +1,7 @@
-// several options here for how to go about changing the image based on the value of select
 // https://stackoverflow.com/questions/33967140/change-html-according-to-select
-// try listener? and then can attempt to do jquery later once everything is working
 
 $("select").on("change", function() {
-    // $(this).nextAll("input, label").remove();
     $(this).nextAll().remove();
-//     if ($(this).prop("value") === "fischl") {
-//         $(this).after("</br></br><label for='name'>Name: </label>" +
-//                        "<input type='text' size='10'/>" +
-//                        "<label for='gpa'>GPA: </label>" +
-//                        "<input type='text' size='10'/>" + $(this).prop("value"));
-//     }
-//    else {
-//         $(this).after("</br></br><label for='name'>Name: </label>" +
-//                        "<input type='text' size='10' />" +
-//                        "<label for='rank'>Rank: </label>" +
-//                        "<input type='text' size='10' />" +
-//                        "<label for='department'>Department: </label>" +
-//                        "<input type='text' size='10' />");
-        //  }
     $(this).after("</br></br><div class=\"characterSelectIcon\"><img src=\"images/" + $(this).prop("value") + "_Icon.jpg\" alt=\"" + $(this).prop("value") + " Icon\" style=\"width: 125px;height:125px;\"></img></div>");
 });
 
@@ -137,25 +120,34 @@ for (let i = 0; i < iconColl.length; i++) {
 
     // one guess icon, the current one. it is an element
     // the event listener listens for a click on the element and executes switchImage with the element as the parameter
-    // iconColl[i].addEventListener("click", switchImage(iconColl[i]));
     // solution from: https://stackoverflow.com/questions/16310423/addeventlistener-calls-the-function-without-me-even-asking-it-to
     iconColl[i].addEventListener("click", () => {switchImage(iconColl[i])});
     // loopTest(iconColl[i]);
+}
 
-    // get the name
-    // characterName = iconColl[i].getAttribute("data-name");
+function resetBoard() {
+    for (let i = 0; i < iconColl.length; i++) {
+        characterName = iconColl[i].getAttribute("data-name");
 
-    // if (dict[characterName]) {
-    //     iconColl[i].src= "images/SpiralAbyss_Cropped.jpg";
-    //     dict[characterName] = false;
-    // }
-    // else {
-    //     characterName
-    // }
+        // if the character's portrait is set to spiral abyss
+        if(!dict[characterName]) {
+            iconColl[i].src = "images/" + characterName + "_Icon.jpg";
+            dict[characterName] = true;
+            // loopTest(iconColl[i]);
+        }
+        else {
+            continue;
+        }
+    }
+
+    // document.getElementById("testP").innerHTML += "Button Pressed";
 }
 
 function loopTest(iconElement) {
     document.getElementById("testP").innerHTML += iconElement.getAttribute("data-name");
 }
+
+// adding a listener for the button
+document.getElementById("resetButton").addEventListener("click", () => {resetBoard()});
 
 // if i need to crop the images https://cloudinary.com/guides/automatic-image-cropping/5-ways-to-crop-images-in-html-css
